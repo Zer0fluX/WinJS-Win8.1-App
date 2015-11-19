@@ -11,6 +11,8 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "AWDemo.Windows", "AWDemo\AW
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "AWDemo.WindowsPhone", "AWDemo\AWDemo.WindowsPhone\AWDemo.WindowsPhone.jsproj", "{D694F197-2D88-4864-A914-69C6A2F9889B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWDemo.Web.API", "AWDemo.Web.API\AWDemo.Web.API.csproj", "{2C1D145E-AD81-4A60-834A-9B0976183926}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AWDemo\AWDemo.Shared\AWDemo.Shared.projitems*{d694f197-2d88-4864-a914-69c6a2f9889b}*SharedItemsImports = 5
@@ -76,6 +78,22 @@ Global
 		{D694F197-2D88-4864-A914-69C6A2F9889B}.Release|x86.ActiveCfg = Release|x86
 		{D694F197-2D88-4864-A914-69C6A2F9889B}.Release|x86.Build.0 = Release|x86
 		{D694F197-2D88-4864-A914-69C6A2F9889B}.Release|x86.Deploy.0 = Release|x86
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|x64.Build.0 = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|ARM.Build.0 = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|x64.ActiveCfg = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|x64.Build.0 = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C1D145E-AD81-4A60-834A-9B0976183926}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
