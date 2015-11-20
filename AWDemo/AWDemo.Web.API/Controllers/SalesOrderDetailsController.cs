@@ -12,44 +12,44 @@ using AWDemo.Web.API.Models;
 
 namespace AWDemo.Web.API.Controllers
 {
-    public class vGetAllCategoriesController : ApiController
+    public class SalesOrderDetailsController : ApiController
     {
         private AWDemoContext db = new AWDemoContext();
 
-        // GET: api/vGetAllCategories
-        public IQueryable<vGetAllCategory> GetvGetAllCategories()
+        // GET: api/SalesOrderDetails
+        public IQueryable<SalesOrderDetail> GetSalesOrderDetails()
         {
-            return db.vGetAllCategories;
+            return db.SalesOrderDetails;
         }
 
-        // GET: api/vGetAllCategories/5
-        [ResponseType(typeof(vGetAllCategory))]
-        public IHttpActionResult GetvGetAllCategory(string id)
+        // GET: api/SalesOrderDetails/5
+        [ResponseType(typeof(SalesOrderDetail))]
+        public IHttpActionResult GetSalesOrderDetail(int id)
         {
-            vGetAllCategory vGetAllCategory = db.vGetAllCategories.Find(id);
-            if (vGetAllCategory == null)
+            SalesOrderDetail salesOrderDetail = db.SalesOrderDetails.Find(id);
+            if (salesOrderDetail == null)
             {
                 return NotFound();
             }
 
-            return Ok(vGetAllCategory);
+            return Ok(salesOrderDetail);
         }
 
-        // PUT: api/vGetAllCategories/5
+        // PUT: api/SalesOrderDetails/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutvGetAllCategory(string id, vGetAllCategory vGetAllCategory)
+        public IHttpActionResult PutSalesOrderDetail(int id, SalesOrderDetail salesOrderDetail)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vGetAllCategory.ParentProductCategoryName)
+            if (id != salesOrderDetail.SalesOrderID)
             {
                 return BadRequest();
             }
 
-            db.Entry(vGetAllCategory).State = EntityState.Modified;
+            db.Entry(salesOrderDetail).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace AWDemo.Web.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!vGetAllCategoryExists(id))
+                if (!SalesOrderDetailExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace AWDemo.Web.API.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/vGetAllCategories
-        [ResponseType(typeof(vGetAllCategory))]
-        public IHttpActionResult PostvGetAllCategory(vGetAllCategory vGetAllCategory)
+        // POST: api/SalesOrderDetails
+        [ResponseType(typeof(SalesOrderDetail))]
+        public IHttpActionResult PostSalesOrderDetail(SalesOrderDetail salesOrderDetail)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.vGetAllCategories.Add(vGetAllCategory);
+            db.SalesOrderDetails.Add(salesOrderDetail);
 
             try
             {
@@ -87,7 +87,7 @@ namespace AWDemo.Web.API.Controllers
             }
             catch (DbUpdateException)
             {
-                if (vGetAllCategoryExists(vGetAllCategory.ParentProductCategoryName))
+                if (SalesOrderDetailExists(salesOrderDetail.SalesOrderID))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace AWDemo.Web.API.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = vGetAllCategory.ParentProductCategoryName }, vGetAllCategory);
+            return CreatedAtRoute("DefaultApi", new { id = salesOrderDetail.SalesOrderID }, salesOrderDetail);
         }
 
-        // DELETE: api/vGetAllCategories/5
-        [ResponseType(typeof(vGetAllCategory))]
-        public IHttpActionResult DeletevGetAllCategory(string id)
+        // DELETE: api/SalesOrderDetails/5
+        [ResponseType(typeof(SalesOrderDetail))]
+        public IHttpActionResult DeleteSalesOrderDetail(int id)
         {
-            vGetAllCategory vGetAllCategory = db.vGetAllCategories.Find(id);
-            if (vGetAllCategory == null)
+            SalesOrderDetail salesOrderDetail = db.SalesOrderDetails.Find(id);
+            if (salesOrderDetail == null)
             {
                 return NotFound();
             }
 
-            db.vGetAllCategories.Remove(vGetAllCategory);
+            db.SalesOrderDetails.Remove(salesOrderDetail);
             db.SaveChanges();
 
-            return Ok(vGetAllCategory);
+            return Ok(salesOrderDetail);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace AWDemo.Web.API.Controllers
             base.Dispose(disposing);
         }
 
-        private bool vGetAllCategoryExists(string id)
+        private bool SalesOrderDetailExists(int id)
         {
-            return db.vGetAllCategories.Count(e => e.ParentProductCategoryName == id) > 0;
+            return db.SalesOrderDetails.Count(e => e.SalesOrderID == id) > 0;
         }
     }
 }

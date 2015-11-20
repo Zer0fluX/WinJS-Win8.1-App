@@ -11,10 +11,19 @@
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize
                 // your application here.
+                args.setPromise(WinJS.xhr({ url: "http://localhost:2985/api/products" }).done(function (data) {
+                    if (data.status === 200) {
+                        var products = JSON.parse(data.responseText);
+                        var productList = new WinJS.Binding.List(products);
+                        var listView = document.getElementById('tempListView').winControl;
+                        listView.itemDataSource = productList.dataSource;
+                    }
+                }));
             } else {
                 // TODO: This application was suspended and then terminated.
                 // To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
             }
+
             args.setPromise(WinJS.UI.processAll());
         }
     };

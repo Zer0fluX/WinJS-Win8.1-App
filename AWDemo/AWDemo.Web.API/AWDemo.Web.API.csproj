@@ -97,9 +97,12 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\GetAllCategoriesController.cs" />
+    <Compile Include="Controllers\ProductAndDescriptionsController.cs" />
+    <Compile Include="Controllers\ProductModelCatalogDescriptionsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\vGetAllCategoriesController.cs" />
-    <Compile Include="Controllers\vProductAndDescriptionsController.cs" />
+    <Compile Include="Controllers\SalesOrderDetailsController.cs" />
+    <Compile Include="Controllers\SalesOrderHeadersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

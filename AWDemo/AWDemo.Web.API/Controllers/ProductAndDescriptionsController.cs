@@ -12,17 +12,17 @@ using AWDemo.Web.API.Models;
 
 namespace AWDemo.Web.API.Controllers
 {
-    public class vProductAndDescriptionsController : ApiController
+    public class ProductAndDescriptionsController : ApiController
     {
         private AWDemoContext db = new AWDemoContext();
 
-        // GET: api/vProductAndDescriptions
+        // GET: api/ProductAndDescriptions
         public IQueryable<vProductAndDescription> GetvProductAndDescriptions()
         {
             return db.vProductAndDescriptions;
         }
 
-        // GET: api/vProductAndDescriptions/5
+        // GET: api/ProductAndDescriptions/5
         [ResponseType(typeof(vProductAndDescription))]
         public IHttpActionResult GetvProductAndDescription(int id)
         {
@@ -35,7 +35,7 @@ namespace AWDemo.Web.API.Controllers
             return Ok(vProductAndDescription);
         }
 
-        // PUT: api/vProductAndDescriptions/5
+        // PUT: api/ProductAndDescriptions/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutvProductAndDescription(int id, vProductAndDescription vProductAndDescription)
         {
@@ -70,7 +70,7 @@ namespace AWDemo.Web.API.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/vProductAndDescriptions
+        // POST: api/ProductAndDescriptions
         [ResponseType(typeof(vProductAndDescription))]
         public IHttpActionResult PostvProductAndDescription(vProductAndDescription vProductAndDescription)
         {
@@ -100,7 +100,7 @@ namespace AWDemo.Web.API.Controllers
             return CreatedAtRoute("DefaultApi", new { id = vProductAndDescription.ProductID }, vProductAndDescription);
         }
 
-        // DELETE: api/vProductAndDescriptions/5
+        // DELETE: api/ProductAndDescriptions/5
         [ResponseType(typeof(vProductAndDescription))]
         public IHttpActionResult DeletevProductAndDescription(int id)
         {
