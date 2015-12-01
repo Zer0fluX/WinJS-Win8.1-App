@@ -17,6 +17,8 @@
                         var productList = new WinJS.Binding.List(products);
                         var listView = document.getElementById('tempListView').winControl;
                         listView.itemDataSource = productList.dataSource;
+                        //var select = document.getElementById('tempSelect').winControl;
+                        //select.data = productList;
                     }
                 }));
             } else {
@@ -28,7 +30,6 @@
         }
     };
 
-    
     function showAlert() {
         var dialog = Windows.UI.Popups.MessageDialog("Toggle, toggle...", "You Did A Thing!");
         dialog.commands.append(new Windows.UI.Popups.UICommand("OK", function (command) { }));
