@@ -28,6 +28,13 @@
         }
     };
 
+    
+    function showAlert() {
+        var dialog = Windows.UI.Popups.MessageDialog("Toggle, toggle...", "You Did A Thing!");
+        dialog.commands.append(new Windows.UI.Popups.UICommand("OK", function (command) { }));
+        dialog.showAsync();
+    }
+
     app.oncheckpoint = function (args) {
         // TODO: This application is about to be suspended. Save any state
         // that needs to persist across suspensions here. You might use the
