@@ -16,9 +16,9 @@
 <body>
     <div id="tempTemplate" data-win-control="WinJS.Binding.Template">
         <div style="width: 100%; height:100%; padding: 5px; background-color: dimgrey; overflow: hidden;">
-            <div data-win-bind="innerText: ProductID"></div>
-            <div data-win-bind="innerText: Name"></div>
-            <div data-win-bind="innerText: Color"></div>
+            <div class="win-type-medium" data-win-bind="innerText: ProductID"></div>
+            <div class="win-type-small" data-win-bind="innerText: Name"></div>
+            <div class="win-type-large" data-win-bind="innerText: Color"></div>
         </div>
     </div>
 
@@ -28,6 +28,5 @@
             layout: {type: WinJS.UI.ListLayout}
          }">
     </div>
-    
 </body>
 </html>
