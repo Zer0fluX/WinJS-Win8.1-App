@@ -19,7 +19,7 @@ http://msftdbprodsamples.codeplex.com/
 To restore the database locally open SQL Server Management Studio, right-click on the *Databases* node, and choose **Resotre Database**.
 
 #### 3. Configure the application:
-Open the AWDemo solution, expand the AWDemo.Web.API, and edit the connection string in the project's **Web.config** file:
+Open the AWDemo solution, expand the AWDemo.Web.API, and edit the connection string in the project's **Web.config** file.  Add your SQL Server UserID and Password:
 ```XML
 <connectionStrings>
     <add name="AWDemoContext" 
