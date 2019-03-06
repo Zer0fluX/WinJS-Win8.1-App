@@ -37,10 +37,10 @@ You need to start the web service before you run the WinJS applications.
 
 Run the Windows app:
 
-1. Set the AWDemo.Windows proejct as the startup project
+1. Set the AWDemo.Windows project as the startup project
 2. Run the application with either **ctrl+F5** or **F5**
 
 Run the Windows Phone app:
 
-1. Set the AWDemo.WindowsPhone proejct as the startup project
+1. Set the AWDemo.WindowsPhone project as the startup project
 2. Run the application with either **ctrl+F5** or **F5**
