@@ -1,4 +1,4 @@
-# WinJS-Win8.1-App
+n# WinJS-Win8.1-App
 This project consists of a [WinJS](https://github.com/winjs/winjs) demonstration application for Windows and Windows Phone 8.1 (or better), the PowerPoint presentation from the San Antonio .NET User Group session where the demo app was used, and instructions for getting everything working on your local machine.
 
 ## Project Notes
@@ -16,7 +16,7 @@ git clone https://github.com/Zer0fluX/WinJS-Win8.1-App.git
 ```
 http://msftdbprodsamples.codeplex.com/
 ```
-To restore the database locally open SQL Server Management Studio, right-click on the *Databases* node, and choose **Resotre Database**.
+To restore the database locally open SQL Server Management Studio, right-click on the *Databases* node, and choose **Restore Database**.
 
 #### 3. Configure the application:
 Open the AWDemo solution, expand the AWDemo.Web.API, and edit the connection string in the project's **Web.config** file.  Add your SQL Server UserID and Password:
